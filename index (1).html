@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutting Plan Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cutting Plan Calculator</h1>
+        <form id="calculatorForm">
+            <div class="form-group">
+                <label for="shelfLength">Shelf Length:</label>
+                <input type="number" id="shelfLength" required>
+            </div>
+            <div class="form-group">
+                <label for="shelfDepth">Shelf Depth:</label>
+                <input type="number" id="shelfDepth" required>
+            </div>
+            <div class="form-group">
+                <label for="liningLength">Lining Length:</label>
+                <input type="number" id="liningLength" required>
+            </div>
+            <div class="form-group">
+                <label for="liningWidth">Lining Width:</label>
+                <input type="number" id="liningWidth" required>
+            </div>
+            <div class="form-group">
+                <label for="unit">Unit:</label>
+                <select id="unit">
+                    <option value="inches">Inches</option>
+                    <option value="cm">Centimeters</option>
+                    <option value="ft">Feet</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numShelves">Number of Shelves:</label>
+                <input type="number" id="numShelves" required>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="result" class="hidden">
+            <h2>Result</h2>
+            <div class="result-summary">
+                <p id="numShelvesPossible"></p>
+                <p id="leftoverArea"></p>
+            </div>
+            <div class="result-details">
+                <div class="detail-item">
+                    <h3>Cutting Plan</h3>
+                    <table id="cuttingPlanTable">
+                        <thead>
+                            <tr>
+                                <th>Length</th>
+                                <th>Width</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="detail-item">
+                    <h3>Remaining Lining</h3>
+                    <p id="remainingLining"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
